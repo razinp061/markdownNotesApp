@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #f7f7f8;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.app-header h1 {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+.error-banner {
+  background: #fdecea;
+  color: #a02c2c;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #f3c1bc;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  flex: 1;
+  min-height: 0;
+}
+
+.app-sidebar {
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.app-main {
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.note-editor-placeholder {
+  color: #888;
+  padding: 2rem;
+  text-align: center;
+}
+
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note-list-empty {
+  padding: 1rem;
+  color: #888;
+}
+
+.note-list-item {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid #eee;
+}
+
+.note-list-item.selected {
+  background: #eef3fc;
+}
+
+.note-list-item-main {
+  flex: 1;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.note-list-item-title {
+  font-weight: 600;
+}
+
+.note-list-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.tag-pill {
+  background: #e4e7ec;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.note-list-item-date {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.note-list-item-delete {
+  border: none;
+  background: none;
+  color: #a02c2c;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0 0.6rem;
+}
+
+.note-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.note-editor-fields {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.note-title-input {
+  flex: 2;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.note-tags-input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+}
+
+.note-editor-split {
+  flex: 1;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.note-body-input {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 0.6rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.9rem;
+}
+
+.md-preview {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.note-editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.note-editor-actions .danger {
+  margin-left: auto;
+  color: #a02c2c;
+}
